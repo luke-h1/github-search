@@ -15,6 +15,9 @@ import {
   Badge,
   SingleUserWrap,
   List,
+  ExtLink,
+  StyleP,
+  ContainerWrap,
 } from './SingleUserEl';
 
 const SingleUser = ({ match }) => {
@@ -61,21 +64,18 @@ const SingleUser = ({ match }) => {
             alt="profile"
             style={{ width: '150px' }}
           />
+        <ContainerWrap>
           <h1>{name}</h1>
-          <p>
+          <StyleP>
             location:
             {location}
-          </p>
-        <div>
+          </StyleP>
           {bio && (
             <>
               <h3>Bio:</h3>
-              <p>{bio}</p>
+              <StyleP>{bio}</StyleP>
             </>
           )}
-          <a href={html_url} className="btn btn-dark my-1">
-            Visit Github Profile
-          </a>
           <List>
             <li>
               {login && (
@@ -104,7 +104,7 @@ const SingleUser = ({ match }) => {
               )}
             </li>
           </List>
-        </div>
+        </ContainerWrap>
         </Center>
         <CenterWrap>
           <Badge>
@@ -123,6 +123,9 @@ const SingleUser = ({ match }) => {
             Gists
             {public_gists}
           </Badge>
+          <ExtLink href={html_url}>
+            Visit Github Profile
+          </ExtLink>
 
         </CenterWrap>
       </CardGrid>

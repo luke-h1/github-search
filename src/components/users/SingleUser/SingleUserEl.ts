@@ -20,6 +20,26 @@ export const List = styled.ul`
     font-size: 18px;
 `;
 
+export const StyleP = styled.p`
+    font-size: 18px;
+    text-align: left;
+`;
+
+export const ContainerWrap = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin-left: 1rem;  
+`;
+
+export const ExtLink = styled.a`
+    text-align: left;
+    color: #000;
+    margin-left: 1rem;
+    color: blue;
+`;
+
 export const SingleLink = styled(Link)`
   text-decoration: none;
   color: #000;
