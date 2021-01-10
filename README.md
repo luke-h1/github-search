@@ -5,8 +5,8 @@ React application which utilises React Hooks & Context to fetch and display resu
 ## architecture
 
 
-### frontend:
-Utilizes React hooks + Context API to manage state. Makes calls to backend Node + express API to make calls to the github API. Hosted on vercel (gh-search.xyz)
+### frontend: (gh-search.xyz) (https://github.com/luke-h1/github-search)
+Utilizes React hooks + Context API to manage state. Makes calls to backend Node + express API to make calls to the github API. Hosted on vercel 
 
 
 ### Backend: 
