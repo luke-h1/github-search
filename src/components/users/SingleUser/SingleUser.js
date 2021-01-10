@@ -105,12 +105,10 @@ const SingleUser = ({ match }) => {
                 </>
               )}
             </li>
-            <ExtLink href={html_url}>
+            <ExtLink href={html_url} target='_blank'>
             Visit Github Profile
           </ExtLink>
             </List>
-     
-
             </ContainerWrap>
 
         </Center>
