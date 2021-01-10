@@ -1,5 +1,4 @@
 import {
-  GET_INIT_USERS,
   SEARCH_USERS,
   CLEAR_USERS,
   GET_REPOS,
@@ -12,12 +11,6 @@ export default (state, action) => {
     default:
       return state;
 
-    case GET_INIT_USERS:
-      return {
-        ...state,
-        initUsers: action.payload,
-        loading: false,
-      };
     case SEARCH_USERS:
       return {
         ...state,
