@@ -12,17 +12,12 @@ const InitialUsers = () => {
     return <Loading />;
   }
 
-  useEffect(() => { 
-     githubContext.getInitialUsers()
-  },[])
 
 
   return (
     <>
       <Container>
-        {initUsers.map((user) => (
-          <UserItem key={user.id} user={user} /> 
-        ))}
+
         {users.map((user) => (
           <UserItem key={user.id} user={user} />
         ))}
