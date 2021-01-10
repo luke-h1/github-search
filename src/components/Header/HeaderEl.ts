@@ -13,6 +13,11 @@ export const HeaderWrap = styled.header`
   background: #dae2df;
 `;
 
+export const AboutLink = styled(Link)`
+  ${HeaderLink};
+  
+`;
+
 export const Title = styled.h2`
   font-weight: 700;
   text-align: center;
