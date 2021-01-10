@@ -13,7 +13,7 @@ const Card = styled.div`
   }
 `;
 
-const RepoItem = ({ repo }) => {
+const RepoItem = ({ repo }: any) => {
   return (
     <>
       <Card>

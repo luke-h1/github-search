@@ -16,7 +16,7 @@ const InitialUsers = () => {
     <>
       <Container>
 
-        {users.map((user) => (
+        {users.map((user): any => (
           <UserItem key={user.id} user={user} />
         ))}
       </Container>
