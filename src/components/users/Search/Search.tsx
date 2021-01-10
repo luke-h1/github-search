@@ -17,6 +17,7 @@ const Search: React.FC = () => {
     if (text === '') {
       alertContext.setAlert('enter a valid string');
     } else {
+      githubContext.clearUsers(); // CLEAR ANY EXISTING USERS AND SEARCH FOR SINGLE USER
       githubContext.searchUsers(text);
       setText('');
     }

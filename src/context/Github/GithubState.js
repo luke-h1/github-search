@@ -38,9 +38,6 @@ const GithubState = props => {
     console.log(res.data);
   };
 
-
-
-
   // GET A USER'S GH REPOS
   const getUserRepos = async username => {
     setLoading();
@@ -65,14 +62,12 @@ const GithubState = props => {
   const getInitialUsers = async () => {
     setLoading();
     const res = await axios.get(`https://github-api-react-express-node.herokuapp.com/api/github/users/all`);
-
     dispatch({
       type: GET_INIT_USERS,
       payload: res.data.items,
     });
     console.log(res.data.items);
   };
-
   return (
     <GithubContext.Provider
       value={{

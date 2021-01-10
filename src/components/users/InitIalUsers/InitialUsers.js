@@ -1,10 +1,11 @@
+/* eslint-disable */
 import React, { useContext } from 'react';
 import { Container } from './InitialUsersEl';
 import GithubContext from '../../../context/Github/githubContext';
 import Loading from '../../layout/Loading';
 import UserItem from '../UserItem/UserItem';
 
-const InitialUsers: React.FC = () => {
+const InitialUsers = () => {
   const githubContext = useContext(GithubContext);
   const { loading, users } = githubContext;
   if (loading) {
