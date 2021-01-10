@@ -1,6 +1,6 @@
 /* eslint-disable */
 import styled from 'styled-components';
-import { BiCodeBlock } from 'react-icons/bi';
+import { FiGithub } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { Container } from '../helpers/Container';
 
@@ -34,7 +34,7 @@ export const NavLogo = styled(Link)`
   align-items: center;
 `;
 
-export const NavIcon = styled(BiCodeBlock)`
+export const NavIcon = styled(FiGithub)`
   margin-right: 0.5rem;
 `;
 
@@ -69,7 +69,7 @@ export const NavMenu = styled.ul`
     position: absolute;
     top: 60px;
     overflow: hidden;
-    left: ${({ click }) => (click ? 0 : '-200%')};
+    left: ${({ click }: any) => (click ? 0 : '-200%')};
     opacity: 1;
     transition: all 0.2s ease;
     background: ${(props) => props.theme.lightTextColor}; 
