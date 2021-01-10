@@ -57,15 +57,7 @@ const GithubState = props => {
   // SET LOADING
   const setLoading = () => dispatch({ type: SET_LOADING });
 
-  // GET INIT USERS
-  const getInitialUsers = async () => {
-    setLoading();
-    const res = await axios.get(`https://github-api-react-express-node.herokuapp.com/api/github/users/all`);
-    dispatch({
-      type: GET_INIT_USERS,
-      payload: res.data,
-    });
-  };
+
   return (
     <GithubContext.Provider
       value={{
@@ -73,12 +65,10 @@ const GithubState = props => {
         user: state.user,
         repos: state.repos,
         loading: state.loading,
-        initUsers: state.initUsers,
         searchUsers,
         clearUsers,
         getSingleUser,
         getUserRepos,
-        getInitialUsers,
       }}
     >
       {props.children}

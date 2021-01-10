@@ -12,8 +12,6 @@ const InitialUsers = () => {
     return <Loading />;
   }
 
-
-
   return (
     <>
       <Container>
