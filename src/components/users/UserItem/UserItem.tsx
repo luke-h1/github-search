@@ -7,6 +7,7 @@ import {
   UserWrap,
   UserLink,
   Title,
+  BtnWrap,
 } from './UserItemEl';
 
 const UserItem = ({ user: { login, avatar_url, html_url } }) => {
@@ -15,13 +16,14 @@ const UserItem = ({ user: { login, avatar_url, html_url } }) => {
       <UserWrap>
         <img
           src={avatar_url}
-          style={{ width: '60px', borderRadius: '10px' }}
-          alt="github user"
+          style={{ width: '280px', borderRadius: '10px' }}
         />
         <Title />
-        <div>
-          <UserLink to={`/user/${login}`}>Github Profile</UserLink>
-        </div>
+        <BtnWrap>
+          <UserLink to={`/user/${login}`}
+            round='true'
+        >Github Profile</UserLink>
+        </BtnWrap>
       </UserWrap>
     </>
   );
