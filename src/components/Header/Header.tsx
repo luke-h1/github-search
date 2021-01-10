@@ -1,36 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { ThemeProvider } from 'styled-components';
+import NavData from '../../data/nav.json';
 import {
-  HeaderWrap,
-  Title,
-  Icon,
-  GithubIcon,
-  HeaderLink,
-  AboutLink,
-  List,
-  Unordered,
-} from './HeaderEl';
+  Nav,
+  NavbarContainer,
+  NavLogo,
+  NavIcon,
+  MobileIcon,
+  NavMenu,
+  NavItem,
+  NavItemBtn,
+  NavLinks,
+  NavBtnLink,
+} from './NavbarElements';
 
-const Header: React.FC = () => (
-  <>
-    <HeaderWrap>
-      <List>
-        <Unordered>
-          <HeaderLink to="/">
-            <Title>Github Searcher</Title>
-          </HeaderLink>
-        </Unordered>
-        <Unordered>
-          <AboutLink to="/about">
-            <Title>About</Title>
-          </AboutLink>
-        </Unordered>
-      </List>
+interface NavInt {
+  title: string;
+  slug: Number;
+}
 
-      <Icon to="/">
-        <GithubIcon />
-      </Icon>
-    </HeaderWrap>
+const Navbar: React.FC<{theme: String}> = (props) => {
+  const theme = props;
+  const [click, setClick] = useState(false);
+  const handleClick: Object = () => setClick(!click);
+  const closeMobileMenu: Object = () => setClick(false);
 
-  </>
-);
-export default Header;
+  return (
+    <ThemeProvider theme={theme}>
+      <>
+        <Nav>
+          <NavbarContainer>
+            <NavLogo to="/" onClick={closeMobileMenu}>
+              <NavIcon />
+              lhowsam
+            </NavLogo>
+            <MobileIcon onClick={handleClick}>
+              {click ? <FaTimes /> : <FaBars />}
+            </MobileIcon>
+            <NavMenu onClick={handleClick} click={click}>
+              {NavData.map((item: NavInt) => (
+                <NavItem>
+                  <NavLinks to={item.slug} onClick={closeMobileMenu}>
+                    {item.title}
+                  </NavLinks>
+                </NavItem>
+              ))}
+              <NavItemBtn>
+                <NavBtnLink />
+              </NavItemBtn>
+              <NavItemBtn />
+            </NavMenu>
+          </NavbarContainer>
+        </Nav>
+      </>
+    </ThemeProvider>
+  );
+};
+
+export default Navbar;
