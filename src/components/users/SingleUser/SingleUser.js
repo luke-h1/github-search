@@ -106,6 +106,10 @@ const SingleUser = ({ match }) => {
               )}
             </li>
             </List>
+            <ExtLink href={html_url}>
+            Visit Github Profile
+          </ExtLink>
+
             </ContainerWrap>
 
         </Center>
@@ -124,13 +128,9 @@ const SingleUser = ({ match }) => {
             {public_repos}
           </Badge>
           <Badge>
-            Gists
+            Gists{'  '}
             {public_gists}
           </Badge>
-
-          <ExtLink href={html_url}>
-            Visit Github Profile
-          </ExtLink>
           </FlexWrap>
         </CenterWrap>
       <Repos repos={repos} />

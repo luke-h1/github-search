@@ -50,10 +50,11 @@ export const ContainerWrap = styled.div`
 `;
 
 export const ExtLink = styled.a`
-    text-align: left;
     color: #000;
     margin-left: 1rem;
     color: blue;
+    font-size: 20px;
+    margin-bottom: 1rem;
 `;
 
 export const SingleLink = styled(Link)`
@@ -65,8 +66,8 @@ export const SingleLink = styled(Link)`
 `;
 
 export const Tick = styled(TiTickOutline)`
-    font-size: 20px;
-    color: #000;
+    font-size: 45px;
+    color: green;
 `;
 
 export const Cross = styled(ImCross)`
