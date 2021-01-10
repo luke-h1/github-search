@@ -2,19 +2,11 @@
 
 React application which utilises React Hooks, Context, Express & node to fetch and display results about github users
 
-### Frontend: 
-<br />
-
-### Backend API: 
-
-<br />
-<br />
-
 ## architecture
 <br />
 
-### frontend: 
-Utilizes React hooks + Context API to manage state. Makes calls to backend Node + express API to make calls to the github API 
+### frontend:
+Utilizes React hooks + Context API to manage state. Makes calls to backend Node + express API to make calls to the github API. Hosted on vercel (gh-search.xyz)
 
 <br />
 
