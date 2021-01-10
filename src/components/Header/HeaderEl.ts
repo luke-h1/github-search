@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 import { Container } from '../helpers/Container';
 
 export const Nav = styled.nav`
-  background: ${(props) => props.theme.primaryBackgroundColor}; 
+  background: #F6F7F8; 
   height: 60px;
   display: flex;
   justify-content: space-between;
   padding: 0.1rem calc((100vw - 1300px) / 2);
   z-index: 999;
   position: relative;
-  border-bottom: 1px solid ${(props) => props.theme.textOnDisabled}; 
+  border-bottom: 1px solid '#eee'; 
     min-width: 100vw;
 `;
 
@@ -21,11 +21,11 @@ export const NavbarContainer = styled(Container)`
   justify-content: space-between;
   height: 60px;
   ${Container}
-  color: ${(props) => props.theme.primaryColor}; 
+  color: #000;
 `;
 
 export const NavLogo = styled(Link)`
-  color: ${(props) => props.theme.primaryColor}; 
+  color: #000;
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
@@ -48,7 +48,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.6rem;
     cursor: pointer;
-    color: ${(props) => props.theme.primaryColor}; 
+    color: #000;
   }
 `;
 
@@ -72,7 +72,8 @@ export const NavMenu = styled.ul`
     left: ${({ click }: any) => (click ? 0 : '-200%')};
     opacity: 1;
     transition: all 0.2s ease;
-    background: ${(props) => props.theme.lightTextColor}; 
+    background: #fff;
+    color: #000;
     font-size: 1.8rem;
     font-weight: 700;
     overflow-y: hidden; /* Hide vertical scrollbar */
@@ -86,7 +87,7 @@ export const NavItem = styled.li`
   height: 60px;
   border-bottom: 2px solid transparent;
   &:hover {
-    border-bottom: 1px solid ${(props) => props.theme.textOnDisabled};
+    border-bottom: 1px solid '#eee';
 
   }
   @media screen and (max-width: 960px) {
@@ -129,7 +130,7 @@ export const NavLinks = styled(Link)`
     text-align: center;
     width: 100%;
     &:hover {
-      color: ${(props) => props.theme.textOnDisabled}; 
+      color: '#eee'; 
       transition: all 0.3s ease;
     }
   }
