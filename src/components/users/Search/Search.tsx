@@ -40,7 +40,7 @@ const Search: React.FC = () => {
         />
       </Form>
       {githubContext.users.length > 0 && (
-      <Button onClick={githubContext.clearUsers} round='true'>
+      <Button onClick={githubContext.clearUsers} round="true">
         Clear
       </Button>
       )}

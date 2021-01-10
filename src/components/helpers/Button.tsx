@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const Button: any = styled.button`
   background: ${({ primary }: any) => (primary ? '#f26a2e' : '#077bf1')};
   white-space: nowrap;
   padding: ${({ big }: any) => (big ? '16px 40px' : '10px 32px')};
