@@ -2,9 +2,10 @@ import React, { useState, useContext } from 'react';
 import GithubContext from '../../../context/Github/githubContext';
 import AlertContext from '../../../context/Alert/alertContext';
 import {
-  SearchInput, Form, Button, SearchWrap,
+  SearchInput, Form, SearchWrap,
 } from './SearchEl';
 import { InputButton } from '../../helpers/InputButton';
+import { Button } from '../../helpers/Button';
 
 const Search: React.FC = () => {
   const githubContext = useContext(GithubContext);
@@ -39,7 +40,7 @@ const Search: React.FC = () => {
         />
       </Form>
       {githubContext.users.length > 0 && (
-      <Button onClick={githubContext.clearUsers}>
+      <Button onClick={githubContext.clearUsers} round='true'>
         Clear
       </Button>
       )}
