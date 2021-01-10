@@ -3,9 +3,7 @@ import React, { useReducer } from 'react';
 import axios from 'axios';
 import GithubContext from './githubContext';
 import GithubReducer from './githubReducer';
-import {
-  GET_INIT_USERS, SEARCH_USERS, CLEAR_USERS, SET_LOADING, GET_USER, GET_REPOS,
-} from '../types';
+import { GET_INIT_USERS, SEARCH_USERS, CLEAR_USERS, SET_LOADING, GET_USER, GET_REPOS } from '../types';
 
 let githubClientId;
 let githubClientSecret;
@@ -18,7 +16,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 // https://github-api-react-express-node.herokuapp.com/
 
-const GithubState = (props) => {
+const GithubState = props => {
   const initialState = {
     users: [],
     user: {},
@@ -29,12 +27,9 @@ const GithubState = (props) => {
   const [state, dispatch] = useReducer(GithubReducer, initialState);
 
   // SEARCH USERS
-  const searchUsers = async (text) => {
+  const searchUsers = async text => {
     setLoading();
-    const res = await axios.get(
-      `https://github-api-react-express-node.herokuapp.com/api/github/search/users/${text}`
-      // `https://api.github.com/search/users?q=${text}&client_id=${githubClientId}&client_secret=${githubClientSecret}`,
-    );
+    const res = await axios.get(`https://github-api-react-express-node.herokuapp.com/api/github/search/users/${text}`);
 
     dispatch({
       type: SEARCH_USERS,
@@ -43,10 +38,9 @@ const GithubState = (props) => {
   };
 
   // GET SINGLE USER
-  const getSingleUser = async (username) => {
+  const getSingleUser = async username => {
     setLoading();
-    const res = await axios.get(
-      `https://api.github.com/users/${username}?client_id=${githubClientId}&client_secret=${githubClientSecret}`);
+    const res = await axios.get(`https://github-api-react-express-node.herokuapp.com/api/github/search/users/one/${username}`);
     setLoading(false);
     dispatch({
       type: GET_USER,
@@ -55,11 +49,15 @@ const GithubState = (props) => {
     console.log(res.data);
   };
 
+
+
+  // `https://api.github.com/users/${username}/repos?per_page=5&sort=creadted:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`,
+
   // GET A USER'S GH REPOS
-  const getUserRepos = async (username) => {
+  const getUserRepos = async username => {
     setLoading();
     const res = await axios.get(
-      `https://api.github.com/users/${username}/repos?per_page=5&sort=creadted:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`,
+      `https://github-api-react-express-node.herokuapp.com/api/github/search/users/repos/${username}`
     );
     setLoading(false);
     dispatch({
@@ -78,7 +76,7 @@ const GithubState = (props) => {
   // GET INIT USERS
   const getInitialUsers = async () => {
     setLoading();
-    const res = await axios.get(`https://api.github.com/search/users&client_id=${githubClientId}&client_secret=${githubClientSecret}`);
+    const res = await axios.get(`https://github-api-react-express-node.herokuapp.com/api/github/users/all`);
 
     dispatch({
       type: GET_INIT_USERS,
@@ -86,7 +84,6 @@ const GithubState = (props) => {
     });
     console.log(res.data.items);
   };
-
 
   return (
     <GithubContext.Provider
