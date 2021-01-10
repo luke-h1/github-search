@@ -105,10 +105,11 @@ const SingleUser = ({ match }) => {
                 </>
               )}
             </li>
-            </List>
             <ExtLink href={html_url}>
             Visit Github Profile
           </ExtLink>
+            </List>
+     
 
             </ContainerWrap>
 
@@ -133,6 +134,7 @@ const SingleUser = ({ match }) => {
           </Badge>
           </FlexWrap>
         </CenterWrap>
+        <h1 style={{marginTop: '1rem', marginBottom: '1rem'}} >Recent Projects</h1>
       <Repos repos={repos} />
       </CardGrid>
       </SingleUserWrap>

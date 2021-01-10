@@ -3,15 +3,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Card = styled.div``;
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h3 { 
+    margin: 1rem 0 1rem 0;
+  }
+`;
 
 const RepoItem = ({ repo }) => {
   return (
-    <Card>
-      <h3>
-        <a href={repo.html_url}>{repo.name}</a>
-      </h3>
-    </Card>
+    <>
+      <Card>
+        <h3>
+          <a href={repo.html_url}>{repo.name}</a>
+        </h3>
+      </Card>
+    </>
   );
 };
 

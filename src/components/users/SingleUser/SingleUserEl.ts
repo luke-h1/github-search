@@ -51,10 +51,10 @@ export const ContainerWrap = styled.div`
 
 export const ExtLink = styled.a`
     color: #000;
-    margin-left: 1rem;
+    text-align: center;
     color: blue;
     font-size: 20px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 `;
 
 export const SingleLink = styled(Link)`
