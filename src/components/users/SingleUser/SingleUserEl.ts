@@ -9,6 +9,7 @@ export const SingleUserWrap = styled.div`
     justify-content: center;
     align-items: center;
     min-height: 30vh;
+    min-width: 100vw;
     background: #878C8F;
     max-width: 100vw;
     margin: 0 auto;
