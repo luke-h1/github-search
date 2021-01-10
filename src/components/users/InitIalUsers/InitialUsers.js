@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Container } from './InitialUsersEl';
 import GithubContext from '../../../context/Github/githubContext';
 import Loading from '../../layout/Loading';
@@ -7,14 +7,22 @@ import UserItem from '../UserItem/UserItem';
 
 const InitialUsers = () => {
   const githubContext = useContext(GithubContext);
-  const { loading, users } = githubContext;
+  const { loading, users, initUsers } = githubContext;
   if (loading) {
     return <Loading />;
   }
 
+  useEffect(() => { 
+     githubContext.getInitialUsers()
+  },[])
+
+
   return (
     <>
       <Container>
+        {initUsers.map((user) => (
+          <UserItem key={user.id} user={user} /> 
+        ))}
         {users.map((user) => (
           <UserItem key={user.id} user={user} />
         ))}

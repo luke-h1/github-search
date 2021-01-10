@@ -49,7 +49,6 @@ const GithubState = props => {
       type: GET_REPOS,
       payload: res.data,
     });
-    console.log(res.data);
   };
 
   // CLEAR USER'S FROM STATE
@@ -64,9 +63,8 @@ const GithubState = props => {
     const res = await axios.get(`https://github-api-react-express-node.herokuapp.com/api/github/users/all`);
     dispatch({
       type: GET_INIT_USERS,
-      payload: res.data.items,
+      payload: res.data,
     });
-    console.log(res.data.items);
   };
   return (
     <GithubContext.Provider
@@ -75,6 +73,7 @@ const GithubState = props => {
         user: state.user,
         repos: state.repos,
         loading: state.loading,
+        initUsers: state.initUsers,
         searchUsers,
         clearUsers,
         getSingleUser,
