@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import axios from 'axios';
 import { Container } from './InitialUsersEl';
 import GithubContext from '../../../context/Github/githubContext';
 import Loading from '../../layout/Loading';
