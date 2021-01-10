@@ -13,6 +13,8 @@ import {
   Center,
   CenterWrap,
   Badge,
+  SingleUserWrap,
+  List,
 } from './SingleUserEl';
 
 const SingleUser = ({ match }) => {
@@ -47,6 +49,7 @@ const SingleUser = ({ match }) => {
 
   return (
     <>
+    <SingleUserWrap>
       <SingleLink to="/">Back to Home</SingleLink>
       Hireable:
       {' '}
@@ -63,7 +66,6 @@ const SingleUser = ({ match }) => {
             location:
             {location}
           </p>
-        </Center>
         <div>
           {bio && (
             <>
@@ -74,7 +76,7 @@ const SingleUser = ({ match }) => {
           <a href={html_url} className="btn btn-dark my-1">
             Visit Github Profile
           </a>
-          <ul>
+          <List>
             <li>
               {login && (
                 <>
@@ -101,8 +103,9 @@ const SingleUser = ({ match }) => {
                 </>
               )}
             </li>
-          </ul>
+          </List>
         </div>
+        </Center>
         <CenterWrap>
           <Badge>
             Followers
@@ -124,6 +127,7 @@ const SingleUser = ({ match }) => {
         </CenterWrap>
       </CardGrid>
       <Repos repos={repos} />
+      </SingleUserWrap>
     </>
   );
 };

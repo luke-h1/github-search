@@ -3,9 +3,29 @@ import { Link } from 'react-router-dom';
 import { TiTickOutline } from 'react-icons/ti';
 import { ImCross } from 'react-icons/im';
 
+export const SingleUserWrap = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background: #EEE5E9;
+    max-width: 1000px;
+    margin: 0 auto;
+`;
+
+export const List = styled.ul`
+    list-style-type: none;
+    margin-left: 20px;
+    font-size: 18px;
+`;
+
 export const SingleLink = styled(Link)`
   text-decoration: none;
   color: #000;
+  margin: 1.5rem;
+  padding-bottom: 1rem;
+  font-size: 20px;
 `;
 
 export const Tick = styled(TiTickOutline)`
