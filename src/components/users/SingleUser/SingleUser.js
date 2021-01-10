@@ -66,17 +66,18 @@ const SingleUser = ({ match }) => {
           />
         <ContainerWrap>
           <h1>{name}</h1>
+          <List>
           <StyleP>
             location:
-            {location}
           </StyleP>
+          {location}
+
           {bio && (
             <>
               <h3>Bio:</h3>
               <StyleP>{bio}</StyleP>
             </>
           )}
-          <List>
             <li>
               {login && (
                 <>

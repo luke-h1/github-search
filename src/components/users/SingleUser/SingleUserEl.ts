@@ -18,11 +18,15 @@ export const List = styled.ul`
     list-style-type: none;
     margin-left: 20px;
     font-size: 18px;
+    li { 
+        margin: 15px 0 15px 0;
+    }
 `;
 
 export const StyleP = styled.p`
     font-size: 18px;
     text-align: left;
+    font-weight: 700;
 `;
 
 export const ContainerWrap = styled.div`
