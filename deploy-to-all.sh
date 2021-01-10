@@ -9,7 +9,6 @@ if ! npm run lint:fix; then
     echo "###########################################" 
     exit 1
 else
-fi
 rm -rf build/ 
 npm run build 
 echo 'Deploying to dev ✅'
@@ -17,3 +16,4 @@ echo 'Deploying to dev ✅'
 vc 
 echo 'Deploying to prod ✅'
 vc --prod
+fi 
