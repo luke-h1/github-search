@@ -1,9 +1,8 @@
 /* eslint-disable */
 import styled from 'styled-components';
 import { BiCodeBlock } from 'react-icons/bi';
-import { Link } from 'gatsby';
-import { FiSun, FiMoon } from 'react-icons/fi';
-import { Container } from '../../helpers/Container/Container';
+import { Link } from 'react-router-dom';
+import { Container } from '../helpers/Container';
 
 export const Nav = styled.nav`
   background: ${(props) => props.theme.primaryBackgroundColor}; 
