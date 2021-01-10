@@ -13,7 +13,16 @@ const Card = styled.div`
   }
 `;
 
-const RepoItem = ({ repo }) => {
+interface Repo {
+  repo { 
+    
+  }
+}
+
+
+
+
+const RepoItem: React.FC = ({ repo }: Repo) => {
   return (
     <>
       <Card>

@@ -8,7 +8,7 @@ const AlertDiv = styled.div`
     }
 `;
 
-const Alert = () => {
+const Alert: React.FC | any = () => {
   const alertcontext = useContext(AlertContext);
   const { alert } = alertcontext;
 

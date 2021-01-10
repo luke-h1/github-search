@@ -7,7 +7,7 @@ import {
   HeaderLink,
 } from './HeaderEl';
 
-const Header = () => (
+const Header: React.FC = () => (
   <>
     <HeaderWrap>
       <HeaderLink to="/">
