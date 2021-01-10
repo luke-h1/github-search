@@ -58,19 +58,16 @@ const SingleUser: React.FC = ({ match }: any) => {
     <>
     <SingleUserWrap>
     <CardWrapContainer>
-
       <SingleLink to="/">Back to Home</SingleLink>
       Hireable:
       {' '}
       {hireable ? (<Tick />) : <Cross />}
-      <CardGrid>
         <Center>
           <StyledImage
             src={avatar_url}
             alt="profile"
             style={{ width: '150px' }}
           />
-        <ContainerWrap>
           <h1>{name}</h1>
           <List>
           <StyleP>
@@ -110,14 +107,14 @@ const SingleUser: React.FC = ({ match }: any) => {
                 </>
               )}
             </li>
-            <ExtLink href={html_url} target='_blank'>
-            Visit Github Profile
-          </ExtLink>
+
             </List>
-            </ContainerWrap>
 
         </Center>
         <CenterWrap>
+        <ExtLink href={html_url} target='_blank'>
+            Visit Github Profile
+          </ExtLink>
           <FlexWrap>
           <Badge>
             Followers{'  '}
@@ -139,7 +136,6 @@ const SingleUser: React.FC = ({ match }: any) => {
         </CenterWrap>
         <SubTitle>Recent Projects</SubTitle>
       <Repos repos={repos} />
-      </CardGrid>
       </CardWrapContainer>
       </SingleUserWrap>
     
