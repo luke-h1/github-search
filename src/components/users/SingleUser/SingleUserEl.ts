@@ -9,9 +9,20 @@ export const SingleUserWrap = styled.div`
     justify-content: center;
     align-items: center;
     min-height: 30vh;
-    background: #F7EBE8;
-    max-width: 1000px;
+    background: #878C8F;
+    max-width: 100vw;
     margin: 0 auto;
+`;
+
+export const CardWrapContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin: 0 auto;
+    color: #fff;
+    background: #000; 
 `;
 
 export const FlexWrap = styled.div`
@@ -102,6 +113,12 @@ export const Badge = styled.p`
   padding: 0.2rem 0.7rem;
   text-align: center;
   margin: 0.3rem;
-  color: #333;
+  color: #fff;
   border-radius: 5px;
+`;
+
+export const SubTitle = styled.h1`
+    color: #fff;
+    margin: 2rem;
+    text-decoration: underline;
 `;

@@ -10,10 +10,12 @@ import {
   Tick,
   Cross,
   CardGrid,
+  CardWrapContainer,
   Center,
   CenterWrap,
   Badge,
   SingleUserWrap,
+  SubTitle,
   FlexWrap,
   List,
   ExtLink,
@@ -55,6 +57,8 @@ const SingleUser: React.FC = ({ match }: any) => {
   return (
     <>
     <SingleUserWrap>
+    <CardWrapContainer>
+
       <SingleLink to="/">Back to Home</SingleLink>
       Hireable:
       {' '}
@@ -133,11 +137,12 @@ const SingleUser: React.FC = ({ match }: any) => {
           </Badge>
           </FlexWrap>
         </CenterWrap>
-        <h1 style={{marginTop: '1rem', marginBottom: '1rem'}} >Recent Projects</h1>
+        <SubTitle>Recent Projects</SubTitle>
       <Repos repos={repos} />
       </CardGrid>
+      </CardWrapContainer>
       </SingleUserWrap>
-      
+    
     </>
   );
 };
