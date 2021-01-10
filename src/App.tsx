@@ -4,7 +4,6 @@ import Header from './components/Header/Header';
 import { GlobalStyle } from './styles/GlobalStyles';
 import Alert from './components/layout/Alert';
 import About from './pages/About';
-// import UserItem from './components/users/UserItem/UserItem';
 import GithubState from './context/Github/GithubState';
 import AlertState from './context/Alert/AlertState';
 import Home from './pages/Home';
