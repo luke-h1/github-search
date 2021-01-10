@@ -1,6 +1,6 @@
 #!/bin/bash
 #!/bin/bash
-if ! npm run lint; then
+if ! npm run lint:fix; then
     echo ''
     echo ''
     echo "###########################################" 
