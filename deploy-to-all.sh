@@ -9,9 +9,11 @@ if ! npm run lint:fix; then
     echo "###########################################" 
     exit 1
 else
-    echo 'eslint returned no errors. Deploying to production ✅'
 fi
 rm -rf build/ 
 npm run build 
+echo 'Deploying to dev ✅'
+
 vc 
+echo 'Deploying to prod ✅'
 vc --prod

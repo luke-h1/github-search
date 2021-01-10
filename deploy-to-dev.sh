@@ -8,7 +8,7 @@ if ! npm run lint:fix; then
     echo "###########################################" 
     exit 1
 else
-    echo 'eslint returned no errors. Deploying to production ✅'
+    echo 'eslint returned no errors. Deploying to dev ✅'
 fi
 rm -rf build/ 
 npm run build 
