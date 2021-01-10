@@ -13,7 +13,7 @@ const Header: React.FC = () => (
       <HeaderLink to="/">
         <Title>Github Searcher</Title>
       </HeaderLink>
-      <Icon>
+      <Icon to="/">
         <GithubIcon />
       </Icon>
     </HeaderWrap>

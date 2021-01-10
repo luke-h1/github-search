@@ -18,7 +18,7 @@ export const Title = styled.h2`
   text-align: center;
 `;
 
-export const Icon = styled.div`
+export const Icon = styled(Link)`
   position: absolute;
   top: 0;
   left: 0;
