@@ -8,6 +8,7 @@ import {
   UserLink,
   Title,
   BtnWrap,
+  UserLinkExternal,
 } from './UserItemEl';
 
 const UserItem = ({ user: { login, avatar_url, html_url } }) => {
@@ -21,8 +22,11 @@ const UserItem = ({ user: { login, avatar_url, html_url } }) => {
         <Title />
         <BtnWrap>
           <UserLink to={`/user/${login}`}
-            round='true'
-        >Github Profile</UserLink>
+        >More Details</UserLink>
+       <UserLinkExternal href={`${html_url}`}
+            style={{ marginTop: '1rem' }}
+        >Github Profile</UserLinkExternal>
+
         </BtnWrap>
       </UserWrap>
     </>
