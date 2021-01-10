@@ -20,6 +20,7 @@ import {
   StyleP,
   ContainerWrap,
 } from './SingleUserEl';
+import { StyledImage } from '../UserItem/UserItemEl';
 
 const SingleUser: React.FC = ({ match }: any) => {
   const githubContext = useContext(GithubContext);
@@ -60,7 +61,7 @@ const SingleUser: React.FC = ({ match }: any) => {
       {hireable ? (<Tick />) : <Cross />}
       <CardGrid>
         <Center>
-          <img
+          <StyledImage
             src={avatar_url}
             alt="profile"
             style={{ width: '150px' }}

@@ -6,10 +6,18 @@ export const UserWrap = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #000;
+    height: 450px;
     padding: 0.4rem;
-    border-radius: 15px;
+    background: #D8E1E9;
     width: 300px;
+`;
+
+export const StyledImage = styled.img`
+  width: 280px;
+  background: rgba(0,0,0,0.5);
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
 `;
 
 export const Title = styled.h2`

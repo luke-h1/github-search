@@ -3,13 +3,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { UserWrap, UserLink, Title, BtnWrap, UserLinkExternal } from './UserItemEl';
+import { UserWrap, UserLink, Title, BtnWrap, UserLinkExternal,StyledImage } from './UserItemEl';
 
 const UserItem = ({ user: { login, avatar_url, html_url } }) => {
   return (
     <>
       <UserWrap>
-        <img src={avatar_url} style={{ width: '280px', borderRadius: '10px' }} />
+        <StyledImage src={avatar_url} />
         <Title />
         <BtnWrap>
           <UserLink to={`/user/${login}`}>More Details</UserLink>
