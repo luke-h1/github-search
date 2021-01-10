@@ -14,6 +14,7 @@ import {
   CenterWrap,
   Badge,
   SingleUserWrap,
+  FlexWrap,
   List,
   ExtLink,
   StyleP,
@@ -104,34 +105,38 @@ const SingleUser = ({ match }) => {
                 </>
               )}
             </li>
-          </List>
-        </ContainerWrap>
+            </List>
+            </ContainerWrap>
+
         </Center>
         <CenterWrap>
+          <FlexWrap>
           <Badge>
-            Followers
+            Followers{'  '}
             {followers}
           </Badge>
           <Badge>
-            Following
+            Following{'  '}
             {following}
           </Badge>
           <Badge>
-            Public Repos
+            Public Repos{'  '}
             {public_repos}
           </Badge>
           <Badge>
             Gists
             {public_gists}
           </Badge>
+
           <ExtLink href={html_url}>
             Visit Github Profile
           </ExtLink>
-
+          </FlexWrap>
         </CenterWrap>
-      </CardGrid>
       <Repos repos={repos} />
+      </CardGrid>
       </SingleUserWrap>
+      
     </>
   );
 };

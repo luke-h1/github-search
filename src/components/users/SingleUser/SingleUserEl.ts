@@ -8,10 +8,17 @@ export const SingleUserWrap = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
+    min-height: 30vh;
     background: #EEE5E9;
     max-width: 1000px;
     margin: 0 auto;
+`;
+
+export const FlexWrap = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const List = styled.ul`
@@ -21,6 +28,11 @@ export const List = styled.ul`
     li { 
         margin: 15px 0 15px 0;
     }
+`;
+
+export const ListItem = styled.li`
+    text-align: center;
+    
 `;
 
 export const StyleP = styled.p`
@@ -63,9 +75,10 @@ export const Cross = styled(ImCross)`
 `;
 
 export const CardGrid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const Center = styled.div`
@@ -82,4 +95,12 @@ export const CenterWrap = styled.div`
     align-items: center;
 `;
 
-export const Badge = styled.div``;
+export const Badge = styled.p`
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 0.2rem 0.7rem;
+  text-align: center;
+  margin: 0.3rem;
+  color: #333;
+  border-radius: 5px;
+`;
