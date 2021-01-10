@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import AlertContext from '../../context/alert/alertContext';
 import styled from 'styled-components';
+import AlertContext from '../../context/Alert/alertContext';
 
 const AlertDiv = styled.div`
     h3{ 
@@ -10,7 +10,7 @@ const AlertDiv = styled.div`
 
 const Alert = () => {
   const alertcontext = useContext(AlertContext);
-  const { alert } = alertContext;
+  const { alert } = alertcontext;
 
   return (
     alert !== null && (
