@@ -4,12 +4,15 @@ import {
   Title,
   Icon,
   GithubIcon,
+  HeaderLink,
 } from './HeaderEl';
 
 const Header = () => (
   <>
     <HeaderWrap>
-      <Title>Github Searcher</Title>
+      <HeaderLink to="/">
+        <Title>Github Searcher</Title>
+      </HeaderLink>
       <Icon>
         <GithubIcon />
       </Icon>
