@@ -48,8 +48,9 @@ export const ListItem = styled.li`
 
 export const StyleP = styled.p`
     font-size: 18px;
-    text-align: left;
+    text-align: center;
     font-weight: 700;
+    margin-bottom: 1px;
 `;
 
 export const ContainerWrap = styled.div`
@@ -98,6 +99,8 @@ export const Center = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center; 
+
 `;
 
 export const CenterWrap = styled.div`

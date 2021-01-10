@@ -27,15 +27,13 @@ import { StyledImage } from '../UserItem/UserItemEl';
 const SingleUser: React.FC = ({ match }: any) => {
   const githubContext = useContext(GithubContext);
 
-  const {
-    getSingleUser, loading, user, repos, getUserRepos,
-  } = githubContext;
+  const { getSingleUser, loading, user, repos, getUserRepos } = githubContext;
 
   useEffect(() => {
     getSingleUser(match.params.login);
     getUserRepos(match.params.login);
     // eslint-disable-next-line
-    },[])
+  }, []);
 
   const {
     name,
@@ -56,89 +54,79 @@ const SingleUser: React.FC = ({ match }: any) => {
 
   return (
     <>
-    <SingleUserWrap>
-    <CardWrapContainer>
-      <SingleLink to="/">Back to Home</SingleLink>
-      Hireable:
-      {' '}
-      {hireable ? (<Tick />) : <Cross />}
-        <Center>
-          <StyledImage
-            src={avatar_url}
-            alt="profile"
-            style={{ width: '150px' }}
-          />
-          <h1>{name}</h1>
-          <List>
-          <StyleP>
-            location:
-          </StyleP>
-          {location}
+      <SingleUserWrap>
+        <CardWrapContainer>
+          <SingleLink to='/'>Back to Home</SingleLink>
+          Hireable: {hireable ? <Tick /> : <Cross />}
+          <Center>
+            <StyledImage src={avatar_url} alt='profile' style={{ width: '150px' }} />
+            <h1>{name}</h1>
+            <List>
+              <p>
+                location:{'  '} {location}
+              </p>
 
-          {bio && (
-            <>
-              <h3>Bio:</h3>
-              <StyleP>{bio}</StyleP>
-            </>
-          )}
-            <li>
-              {login && (
+              {bio && (
                 <>
-                  <strong>username: </strong>
-                  {login}
+                  <h3>Bio:</h3>
+                  <StyleP>{bio}</StyleP>
                 </>
               )}
-            </li>
+              <li>
+                {login && (
+                  <>
+                    <strong>username: </strong>
+                    {login}
+                  </>
+                )}
+              </li>
 
-            <li>
-              {company && (
-                <>
-                  <strong>company: </strong>
-                  {company}
-                </>
-              )}
-            </li>
+              <li>
+                {company && (
+                  <>
+                    <strong>company: </strong>
+                    {company}
+                  </>
+                )}
+              </li>
 
-            <li>
-              {blog && (
-                <>
-                  <strong>Website: </strong>
-                  {blog}
-                </>
-              )}
-            </li>
-
+              <li>
+                {blog && (
+                  <>
+                    <strong>Website: </strong>
+                    {blog}
+                  </>
+                )}
+              </li>
             </List>
-
-        </Center>
-        <CenterWrap>
-        <ExtLink href={html_url} target='_blank'>
-            Visit Github Profile
-          </ExtLink>
-          <FlexWrap>
-          <Badge>
-            Followers{'  '}
-            {followers}
-          </Badge>
-          <Badge>
-            Following{'  '}
-            {following}
-          </Badge>
-          <Badge>
-            Public Repos{'  '}
-            {public_repos}
-          </Badge>
-          <Badge>
-            Gists{'  '}
-            {public_gists}
-          </Badge>
-          </FlexWrap>
-        </CenterWrap>
-        <SubTitle>Recent Projects</SubTitle>
-      <Repos repos={repos} />
-      </CardWrapContainer>
+          </Center>
+          <CenterWrap>
+            <ExtLink href={html_url} target='_blank'>
+              Visit Github Profile
+            </ExtLink>
+            <FlexWrap>
+              <Badge>
+                Followers{'  '}
+                {followers}
+              </Badge>
+              <Badge>
+                Following{'  '}
+                {following}
+              </Badge>
+              <Badge>
+                Public Repos{'  '}
+                {public_repos}
+              </Badge>
+              <Badge>
+                Gists{'  '}
+                {public_gists}
+              </Badge>
+            </FlexWrap>
+          </CenterWrap>
+          <SubTitle>Recent Projects</SubTitle>
+          <Repos repos={repos} />
+        </CardWrapContainer>
       </SingleUserWrap>
-    
     </>
   );
 };
