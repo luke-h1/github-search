@@ -61,7 +61,7 @@ const GithubState = (props) => {
     );
     setLoading(false);
     dispatch({
-      type: GET_USER,
+      type: GET_REPOS,
       payload: res.data,
     });
     console.log(res.data);
