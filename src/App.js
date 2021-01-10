@@ -4,11 +4,12 @@ import Header from './components/Header/Header';
 import { GlobalStyle } from './styles/GlobalStyles';
 import Alert from './components/layout/Alert';
 import About from './pages/About';
-import UserItem from './components/users/UserItem/UserItem';
+// import UserItem from './components/users/UserItem/UserItem';
 import GithubState from './context/Github/GithubState';
 import AlertState from './context/Alert/AlertState';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import SingleUser from './components/users/SingleUser/SingleUser';
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
-            <Route path="/user/:login" component={UserItem} />
+            <Route path="/user/:login" component={SingleUser} />
             <Route component={NotFound} />
           </Switch>
         </Router>

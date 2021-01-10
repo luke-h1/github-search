@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Loading from '../../layout/Loading';
@@ -25,7 +26,7 @@ const SingleUser = ({ match }) => {
     getSingleUser(match.params.login);
     getUserRepos(match.params.login);
     // eslint-disable-next-line
-    })
+    },[])
 
   const {
     name,
@@ -126,3 +127,4 @@ const SingleUser = ({ match }) => {
     </>
   );
 };
+export default SingleUser;
