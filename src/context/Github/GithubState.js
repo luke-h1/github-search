@@ -14,7 +14,6 @@ if (process.env.NODE_ENV !== 'production') {
 } else {
   console.log("we're in production 😎 😀 ");
 }
-// https://github-api-react-express-node.herokuapp.com/
 
 const GithubState = props => {
   const initialState = {
@@ -51,7 +50,6 @@ const GithubState = props => {
 
 
 
-  // `https://api.github.com/users/${username}/repos?per_page=5&sort=creadted:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`,
 
   // GET A USER'S GH REPOS
   const getUserRepos = async username => {
