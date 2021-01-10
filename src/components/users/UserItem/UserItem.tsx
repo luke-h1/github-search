@@ -24,6 +24,7 @@ const UserItem = ({ user: { login, avatar_url, html_url } }) => {
           <UserLink to={`/user/${login}`}
         >More Details</UserLink>
        <UserLinkExternal href={`${html_url}`}
+       target='_blank'
             style={{ marginTop: '1rem' }}
         >Github Profile</UserLinkExternal>
 

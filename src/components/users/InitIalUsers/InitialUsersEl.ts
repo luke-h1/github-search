@@ -17,5 +17,4 @@ export const Container = styled.div`
         grid-gap: 25px;
         margin-left: 2rem;        
     }
-
 `;
