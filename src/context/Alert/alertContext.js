@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { createContext } from 'react';
 
 const alertContext = createContext();

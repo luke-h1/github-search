@@ -14,7 +14,7 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "no-console": "warn",
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts", ".js"] }],
     "react/jsx-props-no-spreading": "off",
     "react/state-in-constructor": "off",
     "no-unsafe-finally": "off",

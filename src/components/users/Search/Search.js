@@ -2,8 +2,9 @@ import React, { useState, useContext } from 'react';
 import GithubContext from '../../../context/Github/githubContext';
 import AlertContext from '../../../context/Alert/alertContext';
 import {
-  SearchInput, Form, SearchInputBtn, Button, SearchWrap,
+  SearchInput, Form, Button, SearchWrap,
 } from './SearchEl';
+import { InputButton } from '../../helpers/InputButton';
 
 const Search = () => {
   const githubContext = useContext(GithubContext);
@@ -30,9 +31,10 @@ const Search = () => {
           value={text}
           onChange={onChange}
         />
-        <SearchInputBtn
+        <InputButton
           type="submit"
           value="Search"
+          style={{ marginLeft: '20px' }}
         />
       </Form>
       {githubContext.users.length > 0 && (
