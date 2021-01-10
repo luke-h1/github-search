@@ -10,7 +10,16 @@ const Card = styled.div`
   align-items: center;
   h3 { 
     margin: 1rem 0 1rem 0;
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin: 10px 0 10px 0;
+      &:hover { 
+        text-decoration: underline;
+      }
+    }
   }
+
 `;
 
 const RepoItem = ({ repo }: any) => {
@@ -18,7 +27,7 @@ const RepoItem = ({ repo }: any) => {
     <>
       <Card>
         <h3>
-          <a href={repo.html_url}>{repo.name}</a>
+          <a href={repo.html_url} target="_blank" rel="noreferrer noopener">{repo.name}</a>
         </h3>
       </Card>
     </>

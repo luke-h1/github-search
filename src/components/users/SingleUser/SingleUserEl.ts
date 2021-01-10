@@ -62,29 +62,37 @@ export const ContainerWrap = styled.div`
 `;
 
 export const ExtLink = styled.a`
-    color: #000;
+    color: #fff;
     text-align: center;
-    color: blue;
     font-size: 20px;
+    text-decoration: none;
     margin-bottom: 2rem;
+    &:hover { 
+        text-decoration: underline;
+    }
 `;
 
 export const SingleLink = styled(Link)`
   text-decoration: none;
-  color: #000;
+  color: #fff;
   margin: 1.5rem;
   padding-bottom: 1rem;
   font-size: 20px;
+  &:hover { 
+      text-decoration: underline;
+  }
 `;
 
 export const Tick = styled(TiTickOutline)`
     font-size: 45px;
     color: green;
+    margin: 1rem 0 1rem 0;
 `;
 
 export const Cross = styled(ImCross)`
-    font-size: 20px;
-    color: #000;
+    font-size: 45px;
+    color: red;
+    margin: 1rem 0 1rem 0;
 `;
 
 export const CardGrid = styled.div`
