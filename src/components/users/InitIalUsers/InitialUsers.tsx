@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Container } from './InitialUsersEl';
 import GithubContext from '../../../context/Github/githubContext';
 import Loading from '../layout/loading';
+import UserItem from '../UserItem/UserItem';
 
 const InitialUsers = () => {
   const githubContext = useContext(GithubContext);
