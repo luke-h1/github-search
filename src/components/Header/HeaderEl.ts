@@ -14,8 +14,11 @@ export const HeaderWrap = styled.header`
 `;
 
 export const AboutLink = styled(Link)`
-  ${HeaderLink};
-  
+  text-decoration: none;
+  color: #000;
+  position: absolute;
+  top: 1rem;
+
 `;
 
 export const Title = styled.h2`
@@ -33,4 +36,15 @@ export const Icon = styled(Link)`
 export const GithubIcon = styled(FiGithub)`
   color: #000;
   font-size: 25px;
+`;
+
+export const Unordered = styled.li`
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const List = styled.ul`
 `;

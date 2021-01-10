@@ -20,7 +20,7 @@ const Header: React.FC = () => (
           </HeaderLink>
         </Unordered>
         <Unordered>
-          <AboutLink to="/">
+          <AboutLink to="/about">
             <Title>About</Title>
           </AboutLink>
         </Unordered>
