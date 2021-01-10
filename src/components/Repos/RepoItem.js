@@ -13,7 +13,7 @@ const Card = styled.div`
   }
 `;
 
-const RepoItem: React.FC = ({ repo }: any) => {
+const RepoItem = ({ repo }) => {
   return (
     <>
       <Card>
