@@ -53,11 +53,11 @@ const SingleUser = ({ match }) => {
       {hireable ? (<Tick />) : <Cross />}
       <CardGrid>
         <Center>
-          {/* <img
-            src={user.owner.avatar_url}
+          <img
+            src={avatar_url}
             alt="profile"
             style={{ width: '150px' }}
-          /> */}
+          />
           <h1>{name}</h1>
           <p>
             location:
