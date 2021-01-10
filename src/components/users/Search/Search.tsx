@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import GithubContext from '../githubContext';
+import GithubContext from '../../../context/Github/githubContext';
 import AlertContext from '../../../context/Alert/alertContext';
 import {
   SearchInput, Form, SearchInputBtn, Button, SearchWrap,
@@ -44,3 +44,4 @@ const Search = () => {
 
   );
 };
+export default Search;

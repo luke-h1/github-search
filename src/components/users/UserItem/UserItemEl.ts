@@ -16,4 +16,4 @@ export const Title = styled.h2`
 export const UserLink = styled(Link)`
     color: #000;
     text-decoration: none;
-`
+`;

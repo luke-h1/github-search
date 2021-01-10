@@ -38,5 +38,4 @@ export const CenterWrap = styled.div`
     align-items: center;
 `;
 
-
-export const Badge = styled.div``
+export const Badge = styled.div``;
