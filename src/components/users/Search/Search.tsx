@@ -6,13 +6,13 @@ import {
 } from './SearchEl';
 import { InputButton } from '../../helpers/InputButton';
 
-const Search = () => {
+const Search: React.FC = () => {
   const githubContext = useContext(GithubContext);
   const alertContext = useContext(AlertContext);
   const [text, setText] = useState('');
-  const onChange = (e) => setText(e.target.value);
+  const onChange = (e: any) => setText(e.target.value);
 
-  const onSubmit = (e) => {
+  const onSubmit = (e: any) => {
     e.preventDefault();
     if (text === '') {
       alertContext.setAlert('enter a valid string');

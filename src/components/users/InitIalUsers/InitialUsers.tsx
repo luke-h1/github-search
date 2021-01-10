@@ -4,7 +4,7 @@ import GithubContext from '../../../context/Github/githubContext';
 import Loading from '../../layout/Loading';
 import UserItem from '../UserItem/UserItem';
 
-const InitialUsers = () => {
+const InitialUsers: React.FC = () => {
   const githubContext = useContext(GithubContext);
   const { loading, users } = githubContext;
   if (loading) {

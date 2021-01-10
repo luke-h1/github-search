@@ -21,7 +21,7 @@ import {
   ContainerWrap,
 } from './SingleUserEl';
 
-const SingleUser = ({ match }) => {
+const SingleUser: React.FC = ({ match }: any) => {
   const githubContext = useContext(GithubContext);
 
   const {
