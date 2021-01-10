@@ -16,6 +16,7 @@ if (process.env.NODE_ENV !== 'production') {
 } else {
   console.log("we're in production 😎 😀 ");
 }
+// https://github-api-react-express-node.herokuapp.com/
 
 const GithubState = (props) => {
   const initialState = {
@@ -31,20 +32,21 @@ const GithubState = (props) => {
   const searchUsers = async (text) => {
     setLoading();
     const res = await axios.get(
-      `https://api.github.com/search/users?q=${text}&client_id=${githubClientId}&client_secret=${githubClientSecret}`,
+      `https://github-api-react-express-node.herokuapp.com/api/github/search/users/${text}`
+      // `https://api.github.com/search/users?q=${text}&client_id=${githubClientId}&client_secret=${githubClientSecret}`,
     );
 
     dispatch({
       type: SEARCH_USERS,
       payload: res.data.items,
     });
-    console.log(res.data.items);
   };
 
   // GET SINGLE USER
   const getSingleUser = async (username) => {
     setLoading();
-    const res = await axios.get(`https://api.github.com/users/${username}?client_id=${githubClientId}&client_secret=${githubClientSecret}`);
+    const res = await axios.get(
+      `https://api.github.com/users/${username}?client_id=${githubClientId}&client_secret=${githubClientSecret}`);
     setLoading(false);
     dispatch({
       type: GET_USER,
