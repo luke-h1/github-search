@@ -5,6 +5,7 @@ import AlertContext from '../../context/Alert/alertContext';
 const AlertDiv = styled.div`
     h3{ 
         font-size: 17px;
+        text-align: center;
     }
 `;
 
