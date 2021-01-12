@@ -132,6 +132,9 @@ export const NavLinks = styled(Link)`
     align-items: center;
     text-align: center;
     width: 100%;
+    &:hover { 
+      border-bottom: 0px;
+    }
   }
 `;
 
